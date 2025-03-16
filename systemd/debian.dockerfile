@@ -1,5 +1,6 @@
-ARG DEBIAN_VERSION=9
-FROM debian:${DEBIAN_VERSION}
+ARG IMAGE_BASE='debian'
+ARG IMAGE_TAG='stable-slim'
+FROM ${IMAGE_BASE}:${IMAGE_TAG}
 
 RUN apt-get update \
 	&& apt-get install -y \
